@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RODNEY CHANDA'S </title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:ORANGE;
+    color:GREEN;
+    overflow-x:hidden;
+}
+
+
+body::before{
+    content:"";
+    position:fixed;
+    width:50PX;
+    height:30PX;
+    background:linear-gradient(45deg,#00f7ff,#6a00ff,#00ff99,#ff00f2);
+    background-size:200% 200%;
+    animation:bgmove 12s infinite alternate;
+    z-index:-1;
+    opacity:0.5;
+}
+
+@keyframes bgmove{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+nav{
+    background:rgba(0,0,0,0.7);
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:ORANGE;
+    text-shadow:0 0 15px #00f7ff;
+}
+
+.menu{
+    position:relative;
+}
+
+.menu button{
+    padding:12px 15px;
+    background:#00f7ff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.menu button:hover{
+    background-COLOR:GREEN;
+    color:orange;
+    transform:scale(1.1);
+}
+
+.dropdown{
+    
+    position:absolute;
+    right:50;
+    background:green;
+    min-width:5px;
+    border-radius:2px;
+    overflow:hidden;
+    box-shadow:0 0 5px blue;
+}
+
+.dropdown a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:2px;
+    transition:0.2s;
+}
+
+.dropdown a:hover{
+    background:bluer;
+    color:orange;
+}
+
+.menu:hover .dropdown{
+    display:flex;
+}
+
+.hero{
+    height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    color:BLUE;
+    text-shadow:0 0 20px #00f7ff;
+    animation:glow 2s infinite alternate;
+}
+
+.hero h2{
+    margin-top:20px;
+    font-size:30px;
+    color:#fff;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:700px;
+    line-height:1.8;
+    font-size:20px;
+       color:black;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 35px;
+    background:#6a00ff;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.4s;
+    font-weight:bold;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    background-color:orange;
+    color:orange;
+    box-shadow:0 0 20px #00f7ff;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #00f7ff;
+    }
+    to{
+        text-shadow:0 0 30px #00f7ff,0 0 50px #6a00ff;
+    }
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background-color:orange;
+    color:black;
+    font-size:30px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+<img src="images/logo.png" alt="KMU">
+<span>@RODNEY CHANDA</span>
+<img href src=""alt="RODNEY CHANDA">
+
+    <div class="menu">
+        <button>MENU ▼</button>
+
+        <div class="dropdown">
+            <a href="index.html">HOME PAGE</a>
+            <a href="about.html">ABOUT RODNEY</a>
+            <a href="services.html">CONTACT</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>WELCOME TO RODNEY CHANDA</h1>
+
+    <h2>CYBER SECURITY STUDENT AT KAPASA MAKASA UNIVERSITY</h2>
+
+    <p>
+        My name is RODNEY CHANDA, a Cyber Security student at Kapasa Makasa University.
+        I specialize in OPERATING SYSTEM SECURITY, FRAUD DETECTION AND PREVENTION, and THREAT INTELLIGENCE ANALYSIS.
+        I am passionate MY NAME IS RODNEY CHANDA, am a student passionate about WEB DEVELOPMENT, CYBER SECURITY AND TECHNOLOGY AT LARGE.         
+    </p>
+
+    <a href="about.html" class="btn">KNOW MORE ABOUT ME!</a>
+</section>
+
+<footer>
+    @RODNEY CHANDA#KMU 2026
+</footer>
+
+</body>
+</html>
