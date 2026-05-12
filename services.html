@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services  RODNEY CHANDA</title>
+<title>Services RODNEY CHANDA</title>
 
 <style>
 *{
@@ -15,20 +14,24 @@
 }
 
 body{
-    background:BLUE;
-    color:white;
+    background-image: url('https://github.com/chandarodney54-pixel/CHANDA/blob/main/IMG-20260512-WA0000.jpg?raw=true');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
-
 
 body::before{
     content:"";
     position:fixed;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
-    background:red;
+    background:linear-gradient(45deg, cyan, blue, limegreen, magenta);
     background-size:400% 400%;
     animation:bgmove 12s infinite alternate;
-    opacity:0.15;
+    opacity:0.2;
     z-index:-1;
 }
 
@@ -39,27 +42,44 @@ body::before{
 
 nav{
     background:rgba(0,0,0,0.8);
-    padding:15px;
+    padding:15px 30px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    backdrop-filter:blur(10px);
 }
 
 .logo{
-    color:ORANGE;
-    font-size:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo span{
+    color:orange;
+    font-size:22px;
+    font-weight:bold;
+    text-shadow:0 0 10px cyan;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+    font-size:16px;
     font-weight:bold;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#00f7ff;
+.nav-links a:hover{
+    color:cyan;
 }
 
 .container{
@@ -69,9 +89,15 @@ nav a:hover{
 .container h1{
     text-align:center;
     font-size:50px;
-    color:PINK;
+    color:pink;
     margin-bottom:50px;
-    text-shadow:0 0 15px WHITE;
+    text-shadow:0 0 15px white;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 10px cyan;}
+    to{text-shadow:0 0 30px cyan,0 0 50px blue;}
 }
 
 .cards{
@@ -81,27 +107,29 @@ nav a:hover{
 }
 
 .card{
-    background:BLACK;
-   color:WHITE;
+    background:rgba(0,0,0,0.85);
+    color:white;
     padding:30px;
     border-radius:20px;
     transition:0.5s;
-    box-shadow:0 0 15px rgba(0,247,255,0.2);
+    box-shadow:0 0 15px cyan;
+    backdrop-filter:blur(5px);
 }
 
 .card:hover{
     transform:translateY(-10px) scale(1.03);
     background:pink;
     color:black;
-    box-shadow:0 0 25px #00f7ff;
-}
-h2{
-color:orange;
+    box-shadow:0 0 25px cyan;
 }
 
 .card h2{
     margin-bottom:15px;
-   color:blue;
+    color:orange;
+}
+
+.card:hover h2{
+    color:darkblue;
 }
 
 .card p{
@@ -111,30 +139,44 @@ color:orange;
 .contact{
     margin-top:60px;
     text-align:center;
+    background:rgba(0,0,0,0.7);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(5px);
+}
+
+.contact h2{
+    color:orange;
+    margin-bottom:20px;
 }
 
 .contact a{
     display:inline-block;
     margin-top:20px;
     padding:15px 30px;
-    background:#6a00ff;
+    background:blue;
     color:white;
     text-decoration:none;
     border-radius:30px;
     transition:0.4s;
+    font-weight:bold;
 }
 
 .contact a:hover{
-    background:#00f7ff;
+    background:orange;
     color:black;
     transform:scale(1.1);
+    box-shadow:0 0 20px cyan;
 }
 
 footer{
     margin-top:40px;
     text-align:center;
     padding:20px;
-    background:#000;
+    background:rgba(0,0,0,0.9);
+    color:orange;
+    font-weight:bold;
+    font-size:18px;
 }
 </style>
 </head>
@@ -142,9 +184,11 @@ footer{
 <body>
 
 <nav>
-    <div class="logo">RODNEY CHANDA</div>
-
-    <div>
+    <div class="logo">
+        <img src="https://github.com/chandarodney54-pixel/CHANDA/blob/main/logo.png?raw=true" alt="RODNEY LOGO">
+        <span>RODNEY CHANDA</span>
+    </div>
+    <div class="nav-links">
         <a href="index.html">HOME PAGE</a>
         <a href="about.html">ABOUT RODNEY CHANDA</a>
         <a href="services.html">MY CONTACTS</a>
@@ -152,21 +196,18 @@ footer{
 </nav>
 
 <div class="container">
-
     <h1>MY SERVICES</h1>
 
     <div class="cards">
-
         <div class="card">
             <h2>ETHICAL HACKING</h2>
             <p>
-I AM A PROFETIONAL ETHICAL HACKER HELPING ORGANIZATIONS IN TESTING THEIR SYSTEMS, FIND VULNERABILITIES, AND PROVIDING POTENTIAL SOLUTIONS IN PATCHING THESE WEAKNESSES BEFORE THE MALICIOUS ACTORS DO.
-                
+                I AM A PROFESSIONAL ETHICAL HACKER HELPING ORGANIZATIONS IN TESTING THEIR SYSTEMS, FIND VULNERABILITIES, AND PROVIDING POTENTIAL SOLUTIONS IN PATCHING THESE WEAKNESSES BEFORE THE MALICIOUS ACTORS DO.
             </p>
         </div>
 
         <div class="card">
-            <h2> WIRELESS SECURITY</h2>
+            <h2>WIRELESS SECURITY</h2>
             <p>
                 MANAGE SECURE WIRELESS COMMUNICATIONS, AND ENDPOINTS INVOLVED IN THE COMMUNICATION
             </p>
@@ -180,25 +221,21 @@ I AM A PROFETIONAL ETHICAL HACKER HELPING ORGANIZATIONS IN TESTING THEIR SYSTEMS
         </div>
 
         <div class="card">
-            <h2>OPERATION SYSTEM</h2>
+            <h2>OPERATING SYSTEM</h2>
             <p>
-            TO MANAGE COMPUTER RESOURCES, AND IMPROVE INCONVENIENCE AND PERFORMANCE
-                
+                TO MANAGE COMPUTER RESOURCES, AND IMPROVE PERFORMANCE AND SECURITY
             </p>
         </div>
-
     </div>
 
     <div class="contact">
-        <h2>FEEL FREE TO REACH OUT FOR ANY SERVICES?</h2>
-
+        <h2>FEEL FREE TO REACH OUT FOR ANY SERVICES</h2>
         <a href="index.html">BACK TO HOME</a>
     </div>
-
 </div>
 
 <footer>
-    @ RODNEY CHANDA#KMU2026
+    @ RODNEY CHANDA #KMU 2026
 </footer>
 
 </body>
